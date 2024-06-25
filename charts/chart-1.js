@@ -1,6 +1,6 @@
 const ctx = document.getElementById('chart-1');
 
-const datasets = [{
+var datasets = [{
         'label': 'AI/ML',
         'color': 'red',
         'value': 12.00
@@ -37,6 +37,7 @@ const datasets = [{
     }
 ];
 
+datasets = datasets.sort((a, b) => b.value - a.value);
 var labels = datasets.map(data => data.label);
 var colors = datasets.map(data => data.color);
 var values = datasets.map(data => data.value);
