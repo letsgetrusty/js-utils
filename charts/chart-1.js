@@ -1,6 +1,6 @@
-const ctx3 = document.getElementById('chart-1');
+const ctx1 = document.getElementById('chart-1');
 
-var datasets3 = [{
+var datasets1 = [{
         'label': 'AI/ML',
         'color': 'red',
         'value': 12.00
@@ -37,20 +37,20 @@ var datasets3 = [{
     }
 ];
 
-datasets3 = datasets3.sort((a, b) => b.value - a.value);
-var labels3 = datasets3.map(data => data.label);
-var colors3 = datasets3.map(data => data.color);
-var values3 = datasets3.map(data => data.value);
+datasets1 = datasets1.sort((a, b) => b.value - a.value);
+var labels1 = datasets1.map(data => data.label);
+var colors1 = datasets1.map(data => data.color);
+var values1 = datasets1.map(data => data.value);
 
-new Chart(ctx3, {
+new Chart(ctx1, {
     type: 'doughnut',
     data: {
-        labels: labels3,
+        labels: labels1,
         datasets: [
             {
                 label: 'market share %',
-                data: values3,
-                borderWidth: 1
+                data: values1,
+                borderWidth: 3
            }
         ]
     },

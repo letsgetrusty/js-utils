@@ -40,7 +40,7 @@ new Chart(ctx3, {
             {
                 label: 'market share %',
                 data: values3,
-                borderWidth: 1
+                borderWidth: 3
            }
         ]
     },

@@ -29,7 +29,7 @@ new Chart(ctx2, {
             {
                 label: 'relative %',
                 data: values2,
-                borderWidth: 1
+                borderWidth: 3
            }
         ]
     },
