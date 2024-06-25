@@ -1,6 +1,6 @@
-const ctx = document.getElementById('chart-1');
+const ctx1 = document.getElementById('chart-1');
 
-var datasets = [{
+var datasets1 = [{
         'label': 'AI/ML',
         'color': 'red',
         'value': 12.00
@@ -37,22 +37,12 @@ var datasets = [{
     }
 ];
 
-datasets = datasets.sort((a, b) => b.value - a.value);
-var labels = datasets.map(data => data.label);
-var colors = datasets.map(data => data.color);
-var values = datasets.map(data => data.value);
+datasets1 = datasets1.sort((a, b) => b.value - a.value);
+var labels = datasets1.map(data => data.label);
+var colors = datasets1.map(data => data.color);
+var values = datasets1.map(data => data.value);
 
-var percentFormatter = (value, ctx) => {
-    let sum = 0;
-    let dataArr = ctx.chart.data.datasets[0].data;
-    dataArr.map(data => {
-        sum += data;
-    });
-    let percentage = (value*100 / sum).toFixed(2)+"%";
-    return percentage;
-};
-
-new Chart(ctx, {
+new Chart(ctx1, {
     type: 'doughnut',
     data: {
         labels: labels,
@@ -73,9 +63,6 @@ new Chart(ctx, {
             },
             title: {
                 display: true
-            },
-            datalabels: {
-                formatter: percentFormatter
             }
         }
     }
