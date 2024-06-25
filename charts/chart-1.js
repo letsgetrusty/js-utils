@@ -1,31 +1,61 @@
 const ctx = document.getElementById('chart-1');
 
+const datasets = [{
+        'label': 'AI/ML',
+        'color': 'red',
+        'value': 12
+    },
+    {
+        'label': 'Backend',
+        'color': 'blue',
+        'value': 19
+    },
+    {
+        'label': 'Embedded/low-level',
+        'color': 'green',
+        'value': 3
+    },
+    {
+        'label': 'Finance',
+        'color': 'orange',
+        'value': 5
+    },
+    {
+        'label': 'Blockchain/Web3',
+        'color': 'purple',
+        'value': 2
+    },
+    {
+        'label': 'Desktop/mobile',
+        'color': 'yellow',
+        'value': 3
+    }
+];
+
+var labels = datasets.map(data => data.label);
+var colors = datasets.map(data => data.color);
+var values = datasets.map(data => data.value);
+
 new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: labels,
         datasets: [
             {
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: 'market share',
+                data: values,
                 borderWidth: 1
            }
         ]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        },
         responsive: true,
         plugins: {
             legend: {
-                // display: false
-                position: 'chartArea'
+                position: 'bottom'
             },
             title: {
-                display: false
+                display: true
             },
         }
     }
