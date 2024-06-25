@@ -1,39 +1,29 @@
-const ctx3 = document.getElementById('chart-1');
+const ctx3 = document.getElementById('chart-3');
 
 var datasets3 = [{
-        'label': 'AI/ML',
+        'label': 'North America',
         'color': 'red',
-        'value': 12.00
+        'value': 61.30
     },
     {
-        'label': 'Backend',
+        'label': 'Latin America',
         'color': 'blue',
-        'value': 19.02
+        'value': 3.02
     },
     {
-        'label': 'Embedded/low-level',
+        'label': 'Western Europe',
         'color': 'green',
-        'value': 45.55
+        'value': 25.49
     },
     {
-        'label': 'Finance',
+        'label': 'Eastern Europe',
         'color': 'orange',
-        'value': 5.23
+        'value': 3.23
     },
     {
-        'label': 'Blockchain/Web3',
+        'label': 'Asia',
         'color': 'purple',
-        'value': 26.52
-    },
-    {
-        'label': 'Desktop/mobile',
-        'color': 'yellow',
-        'value': 3.25
-    },
-    {
-        'label': 'Other',
-        'color': 'grey',
-        'value': 1.51
+        'value': 1.4
     }
 ];
 
